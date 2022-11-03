@@ -1,0 +1,43 @@
+<div class="wrapper">
+  <div class="img-container">
+    <img
+      class="avatar"
+      src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
+    />
+  </div>
+  <div class="container">
+    <div class="title">
+      <p class="account">{{ user.account }}</p>
+      <img
+        class="verify-icon"
+        *ngIf="user.is_verified"
+        src="assets/verification.png"
+      />
+    </div>
+    <div class="count">
+      <p>
+        {{ convert(user.posts_count) }} <span class="count-span">posts</span>
+      </p>
+      <p>
+        {{ convert(user.followers_count) }}
+        <span class="count-span">followers</span>
+      </p>
+      <p>
+        {{ convert(user.following_count) }}
+        <span class="count-span">following</span>
+      </p>
+    </div>
+
+    <div class="name">
+      {{ user.full_name }}
+    </div>
+
+    <div class="biography">
+      <p>{{ user.biography }}</p>
+    </div>
+
+    <div class="external-url">
+      <a class="url" [href]="user.external_url">{{ user.external_url }}</a>
+    </div>
+  </div>
+</div>

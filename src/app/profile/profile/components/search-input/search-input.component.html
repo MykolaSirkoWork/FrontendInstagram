@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <form (submit)="submit()" class="container">
+    <img class="img-search" src="assets/search.svg" />
+    <input
+      [(ngModel)]="username"
+      class="search"
+      type="text"
+      name="name"
+      [placeholder]="user.account || 'username'"
+    />
+  </form>
+</div>
+<hr />
+
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>

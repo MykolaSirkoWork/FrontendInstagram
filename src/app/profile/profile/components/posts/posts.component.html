@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <div class="container" *ngFor="let post of user.recentPosts">
+    <div class="info">
+      <div class="info-content">
+        <div class="likes">
+          <img class="heart" src="assets/heart.svg" />
+          <p class="comment">{{ convert(post.likes_count) }}</p>
+        </div>
+        <div class="likes">
+          <img class="heart" src="assets/comment.svg" />
+          <p class="comment">{{ convert(post.comments) }}</p>
+        </div>
+      </div>
+    </div>
+    <img
+      *ngIf="post.post_type === 'Carousel'"
+      class="reel"
+      src="assets/carousel-slider.svg"
+    />
+    <img
+      *ngIf="post.post_type === 'Reels'"
+      class="reel"
+      src="assets/instagram-reels.svg"
+    />
+    <img
+      class="post"
+      [src]="
+        'https://images.theconversation.com/files/232705/original/file-20180820-30593-1nxanpj.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop'
+      "
+    />
+  </div>
+</div>
